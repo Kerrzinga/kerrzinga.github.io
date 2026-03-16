@@ -226,6 +226,7 @@
     /* ── Section shared ───────────────────────────── */
     .section {
       padding: 5.5rem 1.5rem;
+      position: relative;
     }
     .section--cream { background: var(--cream); }
     .section--white  { background: var(--white); }
