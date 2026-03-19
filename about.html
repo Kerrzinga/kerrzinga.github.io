@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Kerrzinga</title>
+  <meta name="description" content="Kerrzinga was started by Dave Kerr, a web developer with over 20 years of experience, to make great websites accessible to every small New Zealand business.">
+  <link rel="canonical" href="https://kerrzinga.nz/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://kerrzinga.nz/about.html">
+  <meta property="og:title"       content="About Kerrzinga">
+  <meta property="og:description" content="Kerrzinga was started by Dave Kerr, a web developer with over 20 years of experience, to make great websites accessible to every small New Zealand business.">
+  <meta property="og:locale"      content="en_NZ">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── About page hero ───────────────────────────── */
+    .about-hero {
+      background: var(--space);
+      padding: 9rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(140,60,220,0.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(245,200,66,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .about-hero .section-label { color: var(--gold); margin-bottom: 0.75rem; }
+    .about-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .about-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Founder section ──────────────────────────── */
+    .founder-section {
+      background: var(--cream);
+      padding: 5rem 2rem;
+    }
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    @media (max-width: 680px) {
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    .founder-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .founder-photo {
+      width: 100%;
+      max-width: 240px;
+      border-radius: var(--radius);
+      display: block;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+    .founder-name {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    .founder-title {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: -0.5rem;
+    }
+    .founder-copy h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .founder-copy p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 1.25rem;
+    }
+    .founder-copy p:last-child { margin-bottom: 0; }
+
+    /* ── Pull quote ───────────────────────────────── */
+    .pull-quote {
+      background: var(--space);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .pull-quote blockquote {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.55;
+      letter-spacing: -0.02em;
+    }
+    .pull-quote blockquote::before {
+      content: '\201C';
+      color: var(--gold);
+      font-size: 3rem;
+      line-height: 0;
+      vertical-align: -0.6rem;
+      margin-right: 0.15rem;
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      font-style: normal;
+      color: rgba(255,255,255,0.5);
+      font-weight: 600;
+    }
+
+    /* ── Values section ───────────────────────────── */
+    .values-section {
+      background: var(--white);
+      padding: 5rem 2rem;
+    }
+    .values-section .container { max-width: 860px; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .value-card {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    .value-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+    .value-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* ── About CTA ────────────────────────────────── */
+    .about-cta {
+      background: var(--cream);
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .about-cta h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .about-cta p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────── -->
+<nav>
+  <a class="logo" href="index.html"><span>K</span>errzinga</a>
+  <div class="nav-links">
+    <a href="index.html#faq">FAQ</a>
+    <a class="nav-cta" href="index.html#contact">Get your free draft</a>
+  </div>
+</nav>
+
+<!-- ── Page Hero ───────────────────────────────────── -->
+<section class="about-hero">
+  <p class="section-label">Our story</p>
+  <h1>There had to be a better way</h1>
+  <p>Too many small businesses were paying too much upfront, waiting too long, and still not getting quite what they wanted. Kerrzinga is a simpler alternative.</p>
+</section>
+
+<!-- ── Founder Section ─────────────────────────────── -->
+<section class="founder-section">
+  <div class="founder-grid">
+    <div class="founder-photo-wrap">
+      <img
+        class="founder-photo"
+        src="images/dave.png"
+        alt="Dave Kerr, founder of Kerrzinga"
+        width="240"
+      >
+      <p class="founder-name">Dave Kerr</p>
+      <p class="founder-title">Founder, Kerrzinga</p>
+    </div>
+
+    <div class="founder-copy">
+      <h2>The story of Kerrzinga</h2>
+
+      <p>I started Kerrzinga because I felt there had to be a better way for small businesses to get a decent website.</p>
+
+      <p>I had seen too many business owners end up in the same situation. They had ideas, they wanted to take their business seriously, and they knew they needed a website, but the whole thing often felt more expensive, slower, and more awkward than it should have been. Some were put off by big upfront quotes. Others paid the money, waited ages, and still ended up with something that did not quite feel right. Then if they wanted a few changes later, they were back to paying extra again.</p>
+
+      <p>That never made much sense to me.</p>
+
+      <p>The tools for building websites have improved massively over the last few years. It is now possible to create professional, high-quality websites more efficiently than ever before. But a lot of small businesses were still being offered the same old model: big upfront cost, then more charges later.</p>
+
+      <p>I thought there was room to do it differently.</p>
+
+      <p>That is why I started Kerrzinga. I wanted to offer something simpler, more affordable, and easier to live with. Something that gives small businesses a professional website without needing a big lump sum at the start.</p>
+
+      <p>The easiest way to explain it is to compare it to a phone contract. You do not usually pay for everything upfront. You pay a fixed monthly amount, and that covers what you need. Kerrzinga works in a similar way.</p>
+
+      <p>From day one, you get a professionally designed website that works properly across phones, tablets, and computers. Then your monthly payment covers the things that keep it running: your domain name, hosting, routine updates, and ongoing support. No large upfront bill. No hidden extras. No nasty surprises.</p>
+
+      <p>That approach just feels more sensible to me.</p>
+
+      <p>Kerrzinga is my way of making professional websites more accessible for small businesses. Clear pricing, less friction, and a service that feels like it is actually built around the customer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pull Quote ───────────────────────────────────── -->
+<div class="pull-quote">
+  <blockquote>
+    You see the finished design before you spend a cent. If it's not right, you walk away owing nothing.
+    <cite>— Dave Kerr, Founder</cite>
+  </blockquote>
+</div>
+
+<!-- ── CTA ─────────────────────────────────────────── -->
+<section class="about-cta">
+  <h2>Ready to see what we can do?</h2>
+  <p>Tell us about your business and we'll put together a free first draft — no payment, no commitment.</p>
+  <a class="nav-cta" href="index.html#contact">Get your free draft</a>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────── -->
+<footer>
+  <p>© 2026 <strong class="footer-brand">Kerrzinga</strong> · Web design for New Zealand businesses · <a href="mailto:hello@kerrzinga.nz">hello@kerrzinga.nz</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
+</footer>
+
+</body>
+</html>
