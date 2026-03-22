@@ -768,6 +768,48 @@
     }
     .thanks-home:hover { opacity: 0.85; color: var(--space); }
 
+    /* ── FAQ page ─────────────────────────────────── */
+    .faqs-hero {
+      background: var(--space);
+      padding: 9rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .faqs-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(140,60,220,0.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(245,200,66,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .faqs-hero .section-label { color: var(--gold); margin-bottom: 0.75rem; }
+    .faqs-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .faqs-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .faq-see-all {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .faq-see-all:hover { text-decoration: underline; }
+
     /* ── Responsive ───────────────────────────────── */
     @media (max-width: 700px) {
       nav { padding: 0.85rem 1.25rem; }
