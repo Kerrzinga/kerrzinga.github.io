@@ -755,7 +755,7 @@
       margin-bottom: 1rem;
     }
     .thanks-content a { color: var(--gold); }
-    .thanks-home {
+    .thanks-content .thanks-home {
       display: inline-block;
       margin-top: 2rem;
       padding: 0.75rem 1.75rem;
