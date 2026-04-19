@@ -916,33 +916,7 @@
       color: rgba(255,255,255,0.5);
       font-weight: 600;
     }
-    .values-section {
-      background: var(--white);
-      padding: 5rem 2rem;
-    }
-    .values-section .container { max-width: 860px; }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .value-card {
-      background: var(--cream);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-    }
-    .value-card h3 {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 0.6rem;
-      color: var(--ink);
-    }
-    .value-card p {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #444;
-    }
+
     .about-cta {
       background: var(--cream);
       padding: 5rem 2rem;
