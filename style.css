@@ -39,14 +39,27 @@
       border-bottom: 1px solid rgba(245, 200, 66, 0.12);
     }
 
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
     .logo {
       font-size: 1.45rem;
       font-weight: 900;
       color: #fff;
       letter-spacing: -0.03em;
       text-decoration: none;
+      line-height: 1;
     }
     .logo span { color: var(--gold); }
+    .logo-tagline {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
 
     .nav-links {
       display: flex;
@@ -104,42 +117,6 @@
       max-width: 820px;
       width: 100%;
       margin: 0 auto;
-    }
-
-    .hero-location {
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.25rem;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(140, 60, 220, 0.2);
-      border: 1px solid rgba(140, 60, 220, 0.45);
-      color: #c89dff;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 1.75rem;
-    }
-    .hero-badge::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #c89dff;
-      animation: pulse 2.5s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
     }
 
     .hero h1 {
