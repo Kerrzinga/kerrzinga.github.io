@@ -3,251 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Kerrzinga</title>
-  <meta name="description" content="Kerrzinga was started by Dave Kerr, a web developer with over 20 years of experience, to make great websites accessible to every small New Zealand business.">
-  <link rel="canonical" href="https://kerrzinga.nz/about.html">
+  <title>About - Coastie Websites</title>
+  <meta name="description" content="Coastie Websites is run by Dave Kerr, a web designer with 25 years of experience, building affordable websites that get results for Hibiscus Coast businesses.">
+  <link rel="canonical" href="https://coastiewebsites.co.nz/about.html">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
-  <meta property="og:url"         content="https://kerrzinga.nz/about.html">
-  <meta property="og:title"       content="About Kerrzinga">
-  <meta property="og:description" content="Kerrzinga was started by Dave Kerr, a web developer with over 20 years of experience, to make great websites accessible to every small New Zealand business.">
+  <meta property="og:url"         content="https://coastiewebsites.co.nz/about.html">
+  <meta property="og:title"       content="About Coastie Websites">
+  <meta property="og:description" content="Coastie Websites is run by Dave Kerr, a web designer with 25 years of experience, building affordable websites that get results for Hibiscus Coast businesses.">
   <meta property="og:locale"      content="en_NZ">
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* ── About page hero ───────────────────────────── */
-    .about-hero {
-      background: var(--space);
-      padding: 9rem 2rem 5rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .about-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 60% 40%, rgba(140,60,220,0.18) 0%, transparent 65%),
-                  radial-gradient(ellipse at 20% 80%, rgba(245,200,66,0.07) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .about-hero .section-label { color: var(--gold); margin-bottom: 0.75rem; }
-    .about-hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-    }
-    .about-hero p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.72);
-      max-width: 540px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* ── Founder section ──────────────────────────── */
-    .founder-section {
-      background: var(--cream);
-      padding: 5rem 2rem;
-    }
-    .founder-grid {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 4rem;
-      align-items: start;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    @media (max-width: 680px) {
-      .founder-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-    }
-    .founder-photo-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    .founder-photo {
-      width: 100%;
-      max-width: 240px;
-      border-radius: var(--radius);
-      display: block;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    }
-    .founder-name {
-      font-weight: 800;
-      font-size: 1rem;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      text-align: center;
-    }
-    .founder-title {
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: -0.5rem;
-    }
-    .founder-copy h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-      color: var(--ink);
-    }
-    .founder-copy p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 1.25rem;
-    }
-    .founder-copy p:last-child { margin-bottom: 0; }
-
-    /* ── Pull quote ───────────────────────────────── */
-    .pull-quote {
-      background: var(--space);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .pull-quote blockquote {
-      max-width: 640px;
-      margin: 0 auto;
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.55;
-      letter-spacing: -0.02em;
-    }
-    .pull-quote blockquote::before {
-      content: '\201C';
-      color: var(--gold);
-      font-size: 3rem;
-      line-height: 0;
-      vertical-align: -0.6rem;
-      margin-right: 0.15rem;
-    }
-    .pull-quote cite {
-      display: block;
-      margin-top: 1.25rem;
-      font-size: 0.9rem;
-      font-style: normal;
-      color: rgba(255,255,255,0.5);
-      font-weight: 600;
-    }
-
-    /* ── Values section ───────────────────────────── */
-    .values-section {
-      background: var(--white);
-      padding: 5rem 2rem;
-    }
-    .values-section .container { max-width: 860px; }
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .value-card {
-      background: var(--cream);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-    }
-    .value-card h3 {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 0.6rem;
-      color: var(--ink);
-    }
-    .value-card p {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #444;
-    }
-
-    /* ── About CTA ────────────────────────────────── */
-    .about-cta {
-      background: var(--cream);
-      padding: 5rem 2rem;
-      text-align: center;
-      border-top: 1px solid rgba(0,0,0,0.06);
-    }
-    .about-cta h2 {
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
-    }
-    .about-cta p {
-      color: var(--muted);
-      margin-bottom: 2rem;
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body>
 
 <!-- ── Navigation ──────────────────────────────────── -->
 <nav>
-  <a class="logo" href="index.html"><span>K</span>errzinga</a>
+  <div class="logo-group">
+    <a class="logo" href="index.html"><span>C</span>oastie <span>W</span>ebsites</a>
+    <span class="logo-tagline">NZ web design &middot; Whangaparaoa</span>
+  </div>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a class="nav-hide-mobile" href="about.html">About</a>
     <a href="faqs.html">FAQ</a>
-    <a class="nav-cta" href="index.html#contact">Get your free draft</a>
+    <a class="nav-cta" href="subscription.html">Get your free first look</a>
   </div>
 </nav>
 
 <!-- ── Page Hero ───────────────────────────────────── -->
 <section class="about-hero">
-  <p class="section-label">Our story</p>
-  <h1>There had to be a better way</h1>
-  <p>Too many small businesses were paying too much upfront, waiting too long, and still not getting quite what they wanted. Kerrzinga is a simpler alternative.</p>
+  <p class="section-label">About</p>
+  <h1>Affordable websites that get results.</h1>
+  <p>Professional websites for local businesses, without the big-agency price tag.</p>
 </section>
 
-<!-- ── Founder Section ─────────────────────────────── -->
+<!-- ── Meet Dave ────────────────────────────────────── -->
 <section class="founder-section">
   <div class="founder-grid">
     <div class="founder-photo-wrap">
       <img
         class="founder-photo"
-        src="images/dave.png"
-        alt="Dave Kerr, founder of Kerrzinga"
+        src="images/dave.jpg"
+        alt="Dave Kerr, founder of Coastie Websites"
         width="240"
       >
       <p class="founder-name">Dave Kerr</p>
-      <p class="founder-title">Founder, Kerrzinga</p>
+      <p class="founder-title">Founder, Coastie Websites</p>
     </div>
 
     <div class="founder-copy">
-      <h2>The story of Kerrzinga</h2>
-
-      <p>I started Kerrzinga because I felt there had to be a better way for small businesses to get a decent website.</p>
-
-      <p>I had seen too many business owners end up in the same situation. They had ideas, they wanted to take their business seriously, and they knew they needed a website, but the whole thing often felt more expensive, slower, and more awkward than it should have been. Some were put off by big upfront quotes. Others paid the money, waited ages, and still ended up with something that did not quite feel right. Then if they wanted a few changes later, they were back to paying extra again.</p>
-
-      <p>That never made much sense to me.</p>
-
-      <p>The tools for building websites have improved massively over the last few years. It is now possible to create professional, high-quality websites more efficiently than ever before. But a lot of small businesses were still being offered the same old model: big upfront cost, then more charges later.</p>
-
-      <p>I thought there was room to do it differently.</p>
-
-      <p>That is why I started Kerrzinga. I wanted to offer something simpler, more affordable, and easier to live with. Something that gives small businesses a professional website without needing a big lump sum at the start.</p>
-
-      <p>Think of it like a phone contract. You do not walk into a phone shop and pay the full cost of a handset upfront. You spread the cost over time, and in return you get both the phone and the service that keeps it useful, all wrapped into one predictable monthly payment. Kerrzinga works in much the same way.</p>
-
-      <p>From day one, you get a professionally designed website that works properly across phones, tablets, and computers. Then your monthly payment covers the things that keep it running: your domain name, hosting, routine updates, and ongoing support. No large upfront bill. No hidden extras. No nasty surprises.</p>
-
-      <p>That approach just feels more sensible to me.</p>
-
-      <p>Kerrzinga is my way of making professional websites more accessible for small businesses. Clear pricing, less friction, and a service that feels like it is actually built around the customer.</p>
+      <h2>Meet Dave</h2>
+      <p>Hi, I'm Dave, a web designer. I've been designing and building websites for 25 years, and Coastie Websites is my chance to do the work I enjoy most, directly for the local businesses around me.</p>
+      <p>In 2025 my family and I left England and settled in Whangaparaoa, on the Hibiscus Coast. I started Coastie Websites on a simple belief: a good website shouldn't be something only big companies can afford. Local businesses deserve one that looks professional and is easy to find, at a price that makes sense.</p>
+      <p>When I'm not building websites, I'm usually exploring the coast with my family, attempting to keep our chickens out of trouble, or fixing something around our new home.</p>
+      <p>I like being useful and helping people out where I can. It's a big part of how I like to work.</p>
     </div>
   </div>
 </section>
@@ -255,22 +66,48 @@
 <!-- ── Pull Quote ───────────────────────────────────── -->
 <div class="pull-quote">
   <blockquote>
-    You see the finished design before you spend a cent. If it's not right, you walk away owing nothing.
+    You see the direction before you spend a cent. If it's not right, you walk away owing nothing.
     <cite>- Dave Kerr, Founder</cite>
   </blockquote>
 </div>
 
+<!-- ── Why work with me ─────────────────────────────── -->
+<section class="values-section" id="why-me">
+  <div class="container">
+    <p class="section-label">The difference</p>
+    <h2 class="section-title">Why work with me</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>You deal with me, directly</h3>
+        <p>No account managers, no handoffs, no scripts. The person who builds your site is the person you talk to.</p>
+      </div>
+      <div class="value-card">
+        <h3>25 years of experience</h3>
+        <p>I've been designing and building websites for 25 years, so you get something done properly, without the learning curve.</p>
+      </div>
+      <div class="value-card">
+        <h3>One simple price, all included</h3>
+        <p>Your domain, hosting, design and updates in one low monthly fee. No upfront cost, no hidden fees.</p>
+      </div>
+      <div class="value-card">
+        <h3>Found on Google and AI</h3>
+        <p>Your site is built to be found when people search Google or ask an AI, and to make it easy for customers to get in touch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CTA ─────────────────────────────────────────── -->
 <section class="about-cta">
-  <h2>Ready to see what we can do?</h2>
-  <p>Tell us about your business and we'll put together a free first draft - no payment, no commitment.</p>
-  <a class="nav-cta" href="index.html#contact">Get your free draft</a>
+  <h2>Ready to see what Coastie Websites can do?</h2>
+  <p>Tell me about your business and I'll show you a design - no payment, no commitment.</p>
+  <a class="nav-cta" href="subscription.html">Get your free first look</a>
 </section>
 
 <!-- ── Footer ──────────────────────────────────────── -->
 <footer>
-  <p>© 2026 <strong class="footer-brand">Kerrzinga</strong> · Web design for New Zealand businesses · Based in Whangaparaoa, Auckland</p>
-  <p><a href="mailto:hello@kerrzinga.nz">hello@kerrzinga.nz</a> · <a href="tel:0272472281">027 247 2281</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
+  <p>© 2026 <strong class="footer-brand">Coastie Websites</strong> · Web design for New Zealand businesses · Based in Whangaparaoa, Auckland</p>
+  <p><a href="mailto:hello@coastiewebsites.co.nz">hello@coastiewebsites.co.nz</a> · <a href="tel:0272472281">027 247 2281</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
 </footer>
 
 </body>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultural Experiences — Kiri's Kāinga | Māori Homestay Whangaparaoa</title>
+  <meta name="description" content="Guided bush walks, hāngi evenings, kapa haka intro sessions, waka ama, weaving and more — authentic Māori cultural experiences at Kiri's Kāinga, Whangaparaoa NZ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .chapter { padding:5rem 0; border-bottom:1px solid rgba(122,96,80,0.15); }
+    .chapter:last-child { border-bottom:none; }
+    .chapter__inner { display:grid; gap:3rem; align-items:start; max-width:var(--max-w); margin:0 auto; padding:0 2rem; }
+    @media(min-width:900px){ .chapter__inner { grid-template-columns:160px 1fr 1fr; } }
+    .chapter__num { font-family:var(--f-display); font-size:clamp(5rem,12vw,10rem); font-weight:300; color:var(--cream); opacity:0.35; line-height:0.85; transition:opacity 0.4s,color 0.4s; }
+    .chapter:hover .chapter__num { opacity:1; color:var(--ochre); }
+    .chapter__img { overflow:hidden; aspect-ratio:4/5; }
+    .chapter__img img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s var(--ease); }
+    .chapter:hover .chapter__img img { transform:scale(1.04); }
+    .chapter__body { display:flex; flex-direction:column; justify-content:center; }
+    .chapter__body .label { margin-bottom:0.8rem; }
+    .chapter__body h2 { margin-bottom:0.3rem; }
+    .chapter__maori { font-family:var(--f-display); font-style:italic; font-size:1rem; color:var(--mid); margin-bottom:1.5rem; }
+    .chapter__meta { display:flex; flex-wrap:wrap; gap:0.6rem; margin:1.2rem 0; }
+    .meta-pill { font-size:0.72rem; letter-spacing:0.12em; border:1px solid rgba(122,96,80,0.3); color:var(--mid); padding:0.3rem 0.9rem; }
+    .chapter__price { font-family:var(--f-display); font-size:2.4rem; color:var(--rust); margin:1.2rem 0 0.2rem; }
+    .chapter__price-note { font-size:0.78rem; color:var(--mid); margin-bottom:1.5rem; }
+    .includes { margin:1rem 0 1.5rem; }
+    .includes h4 { font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--ochre); margin-bottom:0.6rem; }
+    .includes li { font-size:0.85rem; color:var(--mid); padding:0.2rem 0; }
+    .includes li::before { content:'→  '; color:var(--rust); }
+
+    .addons-grid { display:grid; gap:1px; }
+    @media(min-width:600px){ .addons-grid { grid-template-columns:1fr 1fr; } }
+    @media(min-width:900px){ .addons-grid { grid-template-columns:repeat(3,1fr); } }
+    .addon { padding:2.5rem; background:var(--cream-l); transition:background 0.3s; border-top:2px solid transparent; }
+    .addon:hover { background:var(--cream); border-top-color:var(--ochre); }
+    .addon__icon { font-size:1.8rem; margin-bottom:0.8rem; }
+    .addon h3 { font-size:1.4rem; margin-bottom:0.3rem; }
+    .addon p   { font-size:0.85rem; color:var(--mid); margin-bottom:0.8rem; }
+    .addon__price { font-size:0.78rem; font-weight:600; letter-spacing:0.1em; color:var(--rust); }
+  </style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor cursor--ring" id="cursorRing"></div>
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__logo">Kiri's Kāinga<span>Māori Homestay · Whangaparaoa</span></a>
+  <button class="nav__burger" id="burger" aria-label="Open menu"><span class="nav__burger-line"></span><span class="nav__burger-line"></span><span class="nav__burger-line"></span></button>
+</nav>
+<div class="nav__overlay" id="overlay">
+  <div class="nav__overlay-links">
+    <a href="index.html" class="nav__overlay-link"><span class="nav__overlay-num">01</span><span class="nav__overlay-text">Home</span></a>
+    <a href="accommodation.html" class="nav__overlay-link"><span class="nav__overlay-num">02</span><span class="nav__overlay-text">Accommodation</span></a>
+    <a href="experiences.html" class="nav__overlay-link"><span class="nav__overlay-num">03</span><span class="nav__overlay-text">Experiences</span></a>
+    <a href="about.html" class="nav__overlay-link"><span class="nav__overlay-num">04</span><span class="nav__overlay-text">About Kiri</span></a>
+    <a href="contact.html" class="nav__overlay-link"><span class="nav__overlay-num">05</span><span class="nav__overlay-text">Contact & Book</span></a>
+  </div>
+  <div class="nav__overlay-footer"><span>Whangaparaoa · Aotearoa</span><a href="tel:+6494001234">+64 9 400 1234</a></div>
+</div>
+
+<div class="page-header">
+  <div class="page-header__ghost" aria-hidden="true">WHEAKO</div>
+  <div class="page-header__inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Experiences</div>
+    <h1 data-reveal>Cultural<br><em>Experiences</em></h1>
+    <p class="page-header__sub" data-reveal data-delay="2">Not performances. Invitations into a living culture — led by those who carry it forward.</p>
+  </div>
+</div>
+
+<div class="ticker"><div class="ticker__track">
+  <span class="ticker__item">Guided Bush Walk</span><span class="ticker__item">Hāngi Evening</span><span class="ticker__item">Kapa Haka</span><span class="ticker__item">Waka Ama</span><span class="ticker__item">Raranga Weaving</span><span class="ticker__item">Stargazing</span><span class="ticker__item">Kai Moana</span>
+  <span class="ticker__item">Guided Bush Walk</span><span class="ticker__item">Hāngi Evening</span><span class="ticker__item">Kapa Haka</span><span class="ticker__item">Waka Ama</span><span class="ticker__item">Raranga Weaving</span><span class="ticker__item">Stargazing</span><span class="ticker__item">Kai Moana</span>
+</div></div>
+
+<!-- INTRO -->
+<section class="section--sm bg-white">
+  <div class="container" style="max-width:700px;text-align:center;">
+    <span class="label" data-reveal>Wheako — Experiences</span>
+    <h2 data-reveal data-delay="1">Stories, Kai<br><em>&amp; Connection</em></h2>
+    <p data-reveal data-delay="2" style="color:var(--mid);">Every experience at Kiri's Kāinga is co-created with local hapū members, elders, and tohunga. The most powerful travel moments happen when you're not a tourist — but a temporary member of a living community. All experiences can be booked as add-ons to a stay or as standalone day visits.</p>
+  </div>
+</section>
+
+<!-- CHAPTER 01: BUSH WALK -->
+<div class="bg-white">
+  <div class="chapter" data-reveal>
+    <div class="chapter__inner">
+      <div class="chapter__num">01</div>
+      <div class="chapter__img">
+        <img src="https://images.unsplash.com/photo-1503764654157-72d979d9af2f?w=900&auto=format&fit=crop&q=85" alt="Guided Māori bush walk through native New Zealand forest">
+      </div>
+      <div class="chapter__body">
+        <span class="label">Experience 01</span>
+        <h2>Guided Bush<br><em>Walk</em></h2>
+        <div class="chapter__maori">Haerenga i te ngahere — Journey into the forest</div>
+        <p style="color:var(--mid);">Follow Kiri along ancient pathways through native podocarps and coastal headlands — the same routes her ancestors walked for centuries. She'll introduce you to the rongoā (medicinal plants) hidden between the ferns: kawakawa for healing, tī kōuka for strength, mānuka for everything. You'll pause at a sacred grove where she shares the whakapapa of the land — how every hill, stream, and rock carries a name, a story, and a relationship.</p>
+        <div class="chapter__meta">
+          <span class="meta-pill">⏱ 2–3 hours</span>
+          <span class="meta-pill">👥 2–12 guests</span>
+          <span class="meta-pill">📅 Daily 8am &amp; 2pm</span>
+          <span class="meta-pill">🥾 Moderate pace</span>
+        </div>
+        <div class="includes">
+          <h4>Included</h4>
+          <ul>
+            <li>Expert guided narration by Kiri or trained whānau guide</li>
+            <li>Herbal tea tasting from foraged native plants</li>
+            <li>Printed field guide of plants encountered</li>
+            <li>Morning tea on the clifftop above the Gulf</li>
+          </ul>
+        </div>
+        <div class="chapter__price">NZD $85</div>
+        <div class="chapter__price-note">Per person · Free for accommodation guests staying 2+ nights</div>
+        <a href="contact.html" class="btn btn--rust">Book This Experience</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 02: HĀNGI -->
+  <div class="chapter" data-reveal>
+    <div class="chapter__inner">
+      <div class="chapter__num">02</div>
+      <div class="chapter__img">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&auto=format&fit=crop&q=85" alt="Traditional Māori hāngi feast — earth oven cooking">
+      </div>
+      <div class="chapter__body">
+        <span class="label">Experience 02</span>
+        <h2>Hāngi<br><em>Evening</em></h2>
+        <div class="chapter__maori">Te kai o te whenua — The food of the earth</div>
+        <p style="color:var(--mid);">At first light, volcanic stones are heated in a fire for hours. Then the kai — marinated chicken, lamb, whole kūmara, vegetables — is layered into the earth in harakeke baskets. Guests are welcome to watch the morning preparation, help weave the baskets, and join the ceremonial lowering of the food into the pit. At sunset, the whole whānau gathers around long tables for a feast accompanied by waiata and storytelling beneath open sky.</p>
+        <div class="chapter__meta">
+          <span class="meta-pill">⏱ All day (from 6am)</span>
+          <span class="meta-pill">👥 Up to 20 guests</span>
+          <span class="meta-pill">📅 Fri &amp; Sat</span>
+          <span class="meta-pill">🔥 Earth oven</span>
+        </div>
+        <div class="includes">
+          <h4>Included</h4>
+          <ul>
+            <li>Full hāngi feast — meat, kūmara, vegetables, rewena bread</li>
+            <li>Participation in preparation and the ceremony</li>
+            <li>Evening of waiata and kōrero by the fire</li>
+            <li>Vegetarian alternatives available on request</li>
+          </ul>
+        </div>
+        <div class="chapter__price">NZD $135</div>
+        <div class="chapter__price-note">Per person · 20% discount for accommodation guests · Min. 6 guests</div>
+        <a href="contact.html" class="btn btn--rust">Book This Experience</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 03: KAPA HAKA -->
+  <div class="chapter" data-reveal>
+    <div class="chapter__inner">
+      <div class="chapter__num">03</div>
+      <div class="chapter__img">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe2e2?w=900&auto=format&fit=crop&q=85" alt="Kapa haka cultural performance introduction session">
+      </div>
+      <div class="chapter__body">
+        <span class="label">Experience 03</span>
+        <h2>Kapa Haka<br><em>Intro</em></h2>
+        <div class="chapter__maori">Ko te haka, ko te tangata — The haka is the person</div>
+        <p style="color:var(--mid);">Kapa haka is the heartbeat of Māori identity — a powerful blend of posture, voice, rhythm, and meaning that has carried cultural knowledge across generations. Led by Kiri's cousin Aroha, this 90-minute session takes you through the haka, waiata-ā-ringa, and the principles of unity and presence. No experience needed — only willingness. The session ends with a group haka many guests describe as unexpectedly and profoundly moving.</p>
+        <div class="chapter__meta">
+          <span class="meta-pill">⏱ 90 minutes</span>
+          <span class="meta-pill">👥 All welcome</span>
+          <span class="meta-pill">📅 Tue, Thu, Sun 5pm</span>
+          <span class="meta-pill">🎵 Beginners welcome</span>
+        </div>
+        <div class="includes">
+          <h4>Included</h4>
+          <ul>
+            <li>History and meaning of kapa haka</li>
+            <li>Guided waiata and haka sequence</li>
+            <li>Group practice and final performance</li>
+            <li>Printed karakia (blessing) to take home</li>
+          </ul>
+        </div>
+        <div class="chapter__price">NZD $65</div>
+        <div class="chapter__price-note">Per person · Children under 12 free with paying adult</div>
+        <a href="contact.html" class="btn btn--rust">Book This Experience</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD-ONS -->
+<section class="section bg-cream">
+  <div class="container">
+    <div class="section-rule" data-reveal><span class="label" style="margin:0;">Enhance your stay</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;">
+      <h2 data-reveal>More to<br><em>Discover</em></h2>
+      <p data-reveal style="color:var(--mid);max-width:340px;font-size:0.88rem;">Smaller, intimate add-ons to weave into your time with us. All bookable alongside any room or experience.</p>
+    </div>
+    <div class="addons-grid" data-reveal>
+      <div class="addon"><div class="addon__icon">🎨</div><h3>Tā Moko Talk</h3><p>The history and meaning of Māori tattoo — patterns, lineage, and identity.</p><div class="addon__price">NZD $35 · 60 mins</div></div>
+      <div class="addon"><div class="addon__icon">🎣</div><h3>Kai Moana Fishing</h3><p>Dawn fishing expedition on the Hauraki Gulf with Kiri's uncle Tama. Cook your catch over open flame.</p><div class="addon__price">NZD $110 · Half day</div></div>
+      <div class="addon"><div class="addon__icon">🌙</div><h3>Stargazing &amp; Kōrero</h3><p>Matariki, Rehua, Antares — how Māori navigated by the stars and why the night sky tells the story of creation.</p><div class="addon__price">NZD $45 · 75 mins</div></div>
+      <div class="addon"><div class="addon__icon">🏺</div><h3>Raranga Weaving</h3><p>Sit with kaumātua and learn harakeke weaving — meditative, deeply traditional.</p><div class="addon__price">NZD $55 · 2 hrs</div></div>
+      <div class="addon"><div class="addon__icon">🌊</div><h3>Waka Ama Paddle</h3><p>Outrigger canoe paddling on calm Gulf waters, guided by a national competitor.</p><div class="addon__price">NZD $75 · 2 hrs</div></div>
+      <div class="addon"><div class="addon__icon">🌿</div><h3>Rongoā Plant Walk</h3><p>Specialist walk on traditional Māori plant medicine — identification, preparation, and respectful use.</p><div class="addon__price">NZD $70 · 2 hrs</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pull-quote bg-sage" data-reveal>
+  <div class="pull-quote__mark" style="color:rgba(255,255,255,0.04);" aria-hidden="true">"</div>
+  <blockquote class="pull-quote__text" style="color:var(--cream);">The most powerful travel moments happen when you are not a tourist — but a temporary member of something real.</blockquote>
+  <cite class="pull-quote__cite" style="color:rgba(242,232,208,0.45);">Kiri Tūhoe, Host &amp; Founder</cite>
+</section>
+
+<!-- CTA -->
+<section style="padding:0;">
+  <div class="ed-row">
+    <div class="ed-img">
+      <img src="https://images.unsplash.com/photo-1476041800959-2f6bb412c8ce?w=900&auto=format&fit=crop&q=85" alt="Coastal New Zealand — Whangaparaoa at dusk">
+    </div>
+    <div class="ed-body ed-body--ink" data-reveal>
+      <span class="label" style="color:rgba(242,232,208,0.4)">Ko te wā</span>
+      <h2 style="color:var(--cream);">It's time to<br><em>experience it</em></h2>
+      <p style="color:rgba(242,232,208,0.65);max-width:360px;">All experiences can be bundled with a room stay or booked as a day visit. Group bookings for corporate retreats and schools are also welcome.</p>
+      <div class="flex-wrap mt-2">
+        <a href="contact.html" class="btn">Book an Experience</a>
+        <a href="accommodation.html" class="text-link" style="color:rgba(242,232,208,0.5)">View Rooms →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><div class="footer__brand-name">Kiri's Kāinga</div><div class="footer__brand-sub">Māori Homestay · Whangaparaoa · Est. 2016</div><p>Sharing the stories, kai, and wairua of Aotearoa — one guest at a time.</p></div><div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="accommodation.html">Accommodation</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="about.html">About Kiri</a></li><li><a href="contact.html">Contact &amp; Book</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:kia.ora@kiriskainga.co.nz">kia.ora@kiriskainga.co.nz</a></li><li><a href="tel:+6494001234">+64 9 400 1234</a></li></ul></div></div><div class="footer__bottom"><span>© 2025 Kiri's Kāinga.</span><span class="footer__maori">"He aha te mea nui? He tāngata."</span></div></div></footer>
+<button class="go-top" id="goTop">↑</button>
+<script>
+(function(){
+  const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+  let mx=-100,my=-100,rx=-100,ry=-100;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function a(){cur.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(a);})();
+  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.classList.add('cursor--hover');ring.classList.add('cursor--hover');});el.addEventListener('mouseleave',()=>{cur.classList.remove('cursor--hover');ring.classList.remove('cursor--hover');});});
+  const burger=document.getElementById('burger'),overlay=document.getElementById('overlay');let open=false;
+  burger.addEventListener('click',()=>{open=!open;burger.classList.toggle('open',open);overlay.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';});
+  overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{open=false;burger.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow='';}));
+  const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+  const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target);}});},{threshold:0.1});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  const gt=document.getElementById('goTop');window.addEventListener('scroll',()=>gt.classList.toggle('show',window.scrollY>500));gt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+})();
+</script>
+</body>
+</html>

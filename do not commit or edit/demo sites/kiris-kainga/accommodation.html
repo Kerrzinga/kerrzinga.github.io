@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodation — Kiri's Kāinga | Māori Homestay Whangaparaoa</title>
+  <meta name="description" content="Choose from three thoughtfully designed rooms at Kiri's Kāinga Māori homestay in Whangaparaoa. Garden suite, oceanview room, and family wharepuni available.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .room-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 3rem; }
+    .room-card__inner { display: grid; }
+    @media (min-width: 900px) { .room-card__inner { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .room-card--reverse .room-card__inner { direction: rtl; } }
+    @media (min-width: 900px) { .room-card--reverse .room-card__body { direction: ltr; } }
+    .room-card__gallery { position: relative; overflow: hidden; min-height: 300px; }
+    .room-card__gallery img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; transition: transform 0.6s; }
+    .room-card:hover .room-card__gallery img { transform: scale(1.04); }
+    .room-card__tag-wrap {
+      position: absolute; top: 1rem; left: 1rem;
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+    }
+    .room-card__gallery-tag {
+      background: var(--brown-dark); color: var(--gold-light);
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 50px;
+    }
+    .room-card__body { padding: 2rem 2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.8rem; }
+    .room-card__name { font-size: clamp(1.4rem,3vw,1.9rem); margin-bottom: 0.1rem; }
+    .room-card__subtitle { font-size: 0.85rem; color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .room-card__desc { color: var(--text-mid); font-size: 0.93rem; }
+    .room-card__amenities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.3rem; }
+    .amenity {
+      background: var(--cream-dark); color: var(--text-mid);
+      border: 1px solid #e0d8cc; border-radius: 50px;
+      font-size: 0.78rem; padding: 0.25rem 0.8rem;
+    }
+    .room-card__pricing { margin-top: 0.5rem; }
+    .room-card__price-main { font-size: 1.6rem; font-weight: 700; color: var(--green); }
+    .room-card__price-main span { font-size: 0.9rem; font-weight: 400; color: var(--text-mid); }
+    .room-card__ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.8rem; }
+
+    .comparison { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+    .comparison th, .comparison td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #e8e0d4; }
+    .comparison thead th { background: var(--brown-dark); color: var(--gold-light); font-size: 0.85rem; letter-spacing: 0.08em; }
+    .comparison thead th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .comparison thead th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+    .comparison tbody tr:nth-child(even) { background: var(--cream-dark); }
+    .comparison td.check { color: var(--green); font-size: 1rem; }
+    .comparison td.cross { color: #ccc; font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-name">Kiri's Kāinga</span>
+      <span class="nav__logo-sub">Māori Homestay · Whangaparaoa</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="accommodation.html" class="active">Accommodation</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--primary nav__cta">Book a Stay</a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a>
+    <a href="accommodation.html">Accommodation</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary">Book a Stay</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&auto=format&fit=crop&q=80');"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span> Accommodation</nav>
+    <h1>Your Resting Place</h1>
+    <p>Three rooms, each named for a native tree — each a sanctuary woven with warmth, timber, and the spirit of Aotearoa.</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container" style="max-width:800px;text-align:center;">
+    <span class="section-label">Nohanga — Accommodation</span>
+    <h2>Comfort Meets Culture</h2>
+    <p>At Kiri's Kāinga, your room is more than a place to sleep. Each space has been thoughtfully designed to reflect the textures and tones of the natural world around us — recycled tōtara timber, handwoven tukutuku panels, and linen in the colours of sea and soil. Guests are welcome to use the shared garden kitchen, native plant library, and fire pit at all hours.</p>
+  </div>
+</section>
+
+<!-- ROOM 1: PŌHUTUKAWA -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="room-card fade-in">
+      <div class="room-card__inner">
+        <div class="room-card__gallery">
+          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&auto=format&fit=crop&q=80" alt="Pōhutukawa Suite — garden room with private deck">
+          <div class="room-card__tag-wrap">
+            <span class="room-card__gallery-tag">Garden Suite</span>
+            <span class="room-card__gallery-tag">Most Popular</span>
+          </div>
+        </div>
+        <div class="room-card__body">
+          <div class="room-card__subtitle">Room One</div>
+          <h2 class="room-card__name">Pōhutukawa Suite</h2>
+          <p class="room-card__desc">Named for the scarlet-flowering coastal tree that lines New Zealand's shores, the Pōhutukawa Suite opens onto a secluded garden deck where you can watch fantails dart through harakeke (flax) at dawn. Inside, hand-stitched tapa-cloth cushions, warm timber floors, and a king bed draped in natural linen create an atmosphere of deep, grounded calm.</p>
+          <div class="room-card__amenities">
+            <span class="amenity">🛏 King Bed</span>
+            <span class="amenity">🛁 Ensuite Spa Bath</span>
+            <span class="amenity">☕ Tea &amp; Coffee</span>
+            <span class="amenity">🌿 Garden Deck</span>
+            <span class="amenity">📶 Free WiFi</span>
+            <span class="amenity">❄ Air Con</span>
+          </div>
+          <div class="room-card__pricing">
+            <div class="room-card__price-main">NZD $195 <span>/ night (2 guests)</span></div>
+            <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.2rem">Includes full cooked breakfast &amp; welcome pōwhiri</p>
+          </div>
+          <div class="room-card__ctas">
+            <a href="contact.html" class="btn btn--primary">Book This Room</a>
+            <a href="contact.html" class="btn btn--green">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM 2: TŌTARA -->
+<section class="section">
+  <div class="container">
+    <div class="room-card room-card--reverse fade-in">
+      <div class="room-card__inner">
+        <div class="room-card__gallery">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&auto=format&fit=crop&q=80" alt="Tōtara Room — ocean view, hand-carved details">
+          <div class="room-card__tag-wrap">
+            <span class="room-card__gallery-tag">Oceanview Room</span>
+            <span class="room-card__gallery-tag">Sea Views</span>
+          </div>
+        </div>
+        <div class="room-card__body">
+          <div class="room-card__subtitle">Room Two</div>
+          <h2 class="room-card__name">Tōtara Room</h2>
+          <p class="room-card__desc">The tōtara is one of New Zealand's most sacred and enduring trees — and this room carries that same quiet strength. Elevated to catch the sea breeze, the Tōtara Room features a private verandah overlooking the Hauraki Gulf, a hand-carved pou (post) in the corner, a queen bed with merino-wool throws, and a rainfall shower clad in natural stone. Wake up and watch the sun rise from the water.</p>
+          <div class="room-card__amenities">
+            <span class="amenity">🛏 Queen Bed</span>
+            <span class="amenity">🚿 Stone Rainfall Shower</span>
+            <span class="amenity">🌊 Sea Views</span>
+            <span class="amenity">🪵 Hand-carved Pou</span>
+            <span class="amenity">📶 Free WiFi</span>
+            <span class="amenity">🎨 Original Māori Art</span>
+          </div>
+          <div class="room-card__pricing">
+            <div class="room-card__price-main">NZD $245 <span>/ night (2 guests)</span></div>
+            <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.2rem">Includes full cooked breakfast &amp; a guided 30-min kōrero (conversation)</p>
+          </div>
+          <div class="room-card__ctas">
+            <a href="contact.html" class="btn btn--primary">Book This Room</a>
+            <a href="contact.html" class="btn btn--green">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM 3: KAURI WHAREPUNI -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="room-card fade-in">
+      <div class="room-card__inner">
+        <div class="room-card__gallery">
+          <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=900&auto=format&fit=crop&q=80" alt="Kauri Wharepuni — family sleeping house, wraparound porch">
+          <div class="room-card__tag-wrap">
+            <span class="room-card__gallery-tag">Family Wharepuni</span>
+            <span class="room-card__gallery-tag">Up to 5 Guests</span>
+          </div>
+        </div>
+        <div class="room-card__body">
+          <div class="room-card__subtitle">Room Three</div>
+          <h2 class="room-card__name">Kauri Wharepuni</h2>
+          <p class="room-card__desc">The Kauri Wharepuni is a full self-contained dwelling — a traditional sleeping house reinterpreted for modern families. Reclaimed kauri timber runs throughout. There's a master bedroom with queen bed, two single bunks in the children's nook, a full kitchen stocked with local produce, and a wraparound porch from which to watch the stars. It's a place to be together, unhurried.</p>
+          <div class="room-card__amenities">
+            <span class="amenity">🛏 Queen + 2 Bunks</span>
+            <span class="amenity">🍳 Full Kitchen</span>
+            <span class="amenity">🏡 Private Porch</span>
+            <span class="amenity">🔥 Fire Pit Access</span>
+            <span class="amenity">📶 Free WiFi</span>
+            <span class="amenity">🎒 Kids Welcome</span>
+          </div>
+          <div class="room-card__pricing">
+            <div class="room-card__price-main">NZD $320 <span>/ night (up to 5 guests)</span></div>
+            <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.2rem">Includes breakfast provisions &amp; one family cultural session</p>
+          </div>
+          <div class="room-card__ctas">
+            <a href="contact.html" class="btn btn--primary">Book This Room</a>
+            <a href="contact.html" class="btn btn--green">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">At a glance</span>
+      <h2>Room Comparison</h2>
+    </div>
+    <div style="overflow-x:auto;" class="fade-in">
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Pōhutukawa Suite</th>
+            <th>Tōtara Room</th>
+            <th>Kauri Wharepuni</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Price per night</td><td>NZD $195</td><td>NZD $245</td><td>NZD $320</td></tr>
+          <tr><td>Max guests</td><td>2</td><td>2</td><td>5</td></tr>
+          <tr><td>Bed type</td><td>King</td><td>Queen</td><td>Queen + 2 Bunks</td></tr>
+          <tr><td>Ensuite bathroom</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+          <tr><td>Ocean views</td><td class="cross">—</td><td class="check">✔</td><td class="cross">—</td></tr>
+          <tr><td>Private outdoor space</td><td class="check">✔ Deck</td><td class="check">✔ Verandah</td><td class="check">✔ Wraparound Porch</td></tr>
+          <tr><td>Kitchen access</td><td>Shared garden kitchen</td><td>Shared garden kitchen</td><td>Full private kitchen</td></tr>
+          <tr><td>Breakfast included</td><td class="check">✔ Cooked</td><td class="check">✔ Cooked</td><td class="check">✔ Provisions</td></tr>
+          <tr><td>Free WiFi</td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td></tr>
+          <tr><td>Māori cultural elements</td><td class="check">✔</td><td class="check">✔✔</td><td class="check">✔✔</td></tr>
+          <tr><td>Ideal for</td><td>Couples &amp; solo travellers</td><td>Romantic getaways</td><td>Families &amp; groups</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-note fade-in">
+      <strong>🗓 Booking notes:</strong> Minimum stay of 2 nights. Cultural experience packages are available as add-ons from NZD $65 per person. All rates include GST. We accommodate dietary requirements — please mention these when booking. Peak season (Dec–Feb) rates may vary slightly.
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark" style="text-align:center;">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold)">Nau mai — welcome</span>
+    <h2 style="color:var(--gold-light);margin-bottom:0.8rem">Ready to Choose Your Room?</h2>
+    <p style="max-width:520px;margin:0 auto 2rem;color:rgba(250,245,236,0.8)">Rooms book out quickly in summer. Send us a message and we'll confirm availability within 24 hours.</p>
+    <a href="contact.html" class="btn btn--primary">Enquire &amp; Book →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__brand-name">Kiri's Kāinga</div>
+        <div class="footer__brand-sub">Māori Homestay · Whangaparaoa</div>
+        <p>Sharing the stories, kai, and culture of Aotearoa with the world — one guest at a time. Operated with aroha since 2016.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="about.html">About Kiri</a></li>
+          <li><a href="contact.html">Contact &amp; Bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:kia.ora@kiriskainga.co.nz">kia.ora@kiriskainga.co.nz</a></li>
+          <li><a href="tel:+6494001234">+64 9 400 1234</a></li>
+          <li style="color:rgba(250,245,236,0.55);font-size:0.87rem;padding:0.3rem 0;">12 Tūhoe Lane<br>Whangaparaoa, Auckland 0930</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Kiri's Kāinga. All rights reserved.</span>
+      <span class="footer__korero">"Ko au ko te awa, ko te awa ko au."</span>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Back to top">↑</button>
+
+<script>
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('drawer');
+  burger.addEventListener('click', () => { burger.classList.toggle('open'); drawer.classList.toggle('open'); });
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => { scrollBtn.classList.toggle('visible', window.scrollY > 400); });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  const faders = document.querySelectorAll('.fade-in');
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }}); }, { threshold: 0.1 });
+  faders.forEach(f => io.observe(f));
+</script>
+</body>
+</html>
