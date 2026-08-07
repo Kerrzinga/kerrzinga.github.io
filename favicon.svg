@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Coastie Websites">
+  <rect width="64" height="64" rx="16" fill="#1e1e38"/>
+  <path d="M9 49c7-7 14-7 21 0s14 7 25 0" fill="none" stroke="#f5c842" stroke-width="5" stroke-linecap="round"/>
+  <text x="12" y="31" fill="#f5c842" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="900">C</text>
+  <text x="29" y="43" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900">W</text>
+</svg>
