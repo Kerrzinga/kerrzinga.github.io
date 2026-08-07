@@ -62,7 +62,12 @@
 <!-- ── Navigation ──────────────────────────────────── -->
 <nav>
   <a class="logo" href="index.html"><span>C</span>oastie <span>W</span>ebsites</a>
-  <div class="nav-links">
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links" id="site-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="faqs.html">FAQ</a>
@@ -75,6 +80,7 @@
   <canvas id="subscription-stars" aria-hidden="true"></canvas>
   <h1>Let's see what your site could be</h1>
   <p>Tell me about your business and I'll show you how your site could work before you spend anything. If it feels right, I build the real site and look after it for one simple monthly fee.</p>
+  <a class="cta-primary hero-cta" href="#contact">Tell me what you need</a>
 </section>
 
 <!-- ── How it works ───────────────────────────────── -->
@@ -384,6 +390,7 @@
   <p><a href="mailto:hello@coastiewebsites.co.nz">hello@coastiewebsites.co.nz</a> · <a href="tel:0272472281">027 247 2281</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a></p>
 </footer>
 
+<script src="script.js"></script>
 <script>
 (function () {
   const canvas = document.getElementById('subscription-stars');
