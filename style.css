@@ -234,7 +234,7 @@
     }
     /* ── Orewa photo background on the "How it works" section ── */
     #how-it-works {
-      background: linear-gradient(rgba(18,28,42,0.1), rgba(18,28,42,0.1)), url('images/orewa.jpg') center center / cover no-repeat;
+      background: linear-gradient(rgba(18,28,42,0.4), rgba(18,28,42,0.4)), url('images/orewa.jpg') center center / cover no-repeat;
     }
     #how-it-works .section-label { color: var(--gold); }
     #how-it-works .section-title { color: #fff; }
