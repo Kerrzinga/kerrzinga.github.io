@@ -130,7 +130,11 @@
       align-items: center;
       justify-content: center;
       /* Original cosmic look: background: var(--space); */
-      background: linear-gradient(rgba(20, 22, 30, 0.5), rgba(20, 22, 30, 0.5)), url('images/beach1.jpg') center/cover no-repeat;
+      background-color: var(--space);
+      background-image: linear-gradient(rgba(20, 22, 30, 0.5), rgba(20, 22, 30, 0.5)), url('images/beach1.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       overflow: hidden;
     }
 
