@@ -232,6 +232,14 @@
     @media (max-width: 620px) {
       #why-me .values-grid { grid-template-columns: 1fr; }
     }
+    /* ── Orewa photo background on the "How it works" section ── */
+    #how-it-works {
+      background: linear-gradient(rgba(18,28,42,0.1), rgba(18,28,42,0.1)), url('images/orewa.jpg') center center / cover no-repeat;
+    }
+    #how-it-works .section-label { color: var(--gold); }
+    #how-it-works .section-title { color: #fff; }
+    #how-it-works .section-sub   { color: rgba(255,255,255,0.90); }
+
     .section--space  { background: var(--space); }
 
     /* Reusable beach photo background — apply to any section by adding this class.
@@ -286,7 +294,9 @@
     }
 
     .step-card {
-      background: var(--white);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border-radius: var(--radius);
       padding: 2rem 1.75rem;
       box-shadow: 0 2px 24px rgba(0,0,0,0.06);
@@ -318,7 +328,7 @@
       letter-spacing: -0.01em;
     }
     .step-card p {
-      color: var(--muted);
+      color: #333;
       font-size: 0.92rem;
       line-height: 1.65;
     }
@@ -394,6 +404,15 @@
       justify-content: center;
       gap: 0.75rem;
       margin: 2rem 0 2.75rem;
+    }
+    .pricing-note {
+      margin: 1.5rem auto 0;
+    }
+    .pricing-note a {
+      color: var(--gold);
+    }
+    .pricing-cta {
+      margin-top: 2rem;
     }
     .price-tag {
       display: flex;
@@ -982,7 +1001,9 @@
       margin-top: 3rem;
     }
     .value-card {
-      background: var(--cream);
+      background: rgba(250,247,242,0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border-radius: var(--radius);
       padding: 1.75rem;
     }
@@ -995,7 +1016,7 @@
     .value-card p {
       font-size: 0.95rem;
       line-height: 1.7;
-      color: #444;
+      color: #333;
     }
 
     /* ── FAQ page ─────────────────────────────────── */

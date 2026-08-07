@@ -263,9 +263,9 @@
         </div>
       </div>
 
-      <p class="section-sub" style="margin: 1.5rem auto 0;">Prefer to pay upfront as a one-off, or need an existing site repaired or refreshed instead? <a href="#contact" style="color: var(--gold);">Tell me what you need</a> and I can work something out.</p>
+      <p class="section-sub pricing-note">Prefer to pay upfront as a one-off, or need an existing site repaired or refreshed instead? <a href="#contact">Tell me what you need</a> and I can work something out.</p>
 
-      <a class="cta-primary" href="#contact">Get your free first look</a>
+      <a class="cta-primary pricing-cta" href="#contact">Tell me what you need</a>
     </div>
   </div>
 </section>
@@ -398,7 +398,7 @@
         x: Math.random() * width,
         y: Math.random() * height,
         r: Math.random() * 1.6 + 0.25,
-        alpha: Math.random() * 0.65 + 0.25,
+        alpha: Math.random() * 0.6 + 0.4,
         speed: Math.random() * 0.6 + 0.1,
         phase: Math.random() * Math.PI * 2
       });
@@ -527,7 +527,7 @@
     });
 
     stars.forEach(star => {
-      const twinkle = 0.45 + 0.55 * Math.sin(time * star.speed + star.phase);
+      const twinkle = 0.6 + 0.4 * Math.sin(time * star.speed + star.phase);
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(255,255,255,${star.alpha * twinkle})`;
