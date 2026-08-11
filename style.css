@@ -598,13 +598,6 @@
       transform: none;
       box-shadow: none;
     }
-    .form-note {
-      margin-top: 0.75rem;
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
     .contact-aside h3 {
       font-size: 1.2rem;
       font-weight: 800;
@@ -729,6 +722,12 @@
 
     /* ── FAQ section ───────────────────────────────── */
     .faq-container { max-width: 680px; }
+    .faq-more {
+      margin-top: 2rem;
+      text-align: center;
+      max-width: none;
+    }
+    .faq-more a { color: var(--gold); }
     .faq-list {
       display: flex;
       flex-direction: column;
